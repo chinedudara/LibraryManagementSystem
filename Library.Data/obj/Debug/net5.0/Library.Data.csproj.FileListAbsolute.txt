@@ -1,0 +1,14 @@
+C:\Development\Project\Library\Library.Data\bin\Debug\net5.0\Library.Data.deps.json
+C:\Development\Project\Library\Library.Data\bin\Debug\net5.0\Library.Data.runtimeconfig.json
+C:\Development\Project\Library\Library.Data\bin\Debug\net5.0\Library.Data.runtimeconfig.dev.json
+C:\Development\Project\Library\Library.Data\bin\Debug\net5.0\Library.Data.dll
+C:\Development\Project\Library\Library.Data\bin\Debug\net5.0\ref\Library.Data.dll
+C:\Development\Project\Library\Library.Data\bin\Debug\net5.0\Library.Data.pdb
+C:\Development\Project\Library\Library.Data\obj\Debug\net5.0\Library.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\Project\Library\Library.Data\obj\Debug\net5.0\Library.Data.AssemblyInfoInputs.cache
+C:\Development\Project\Library\Library.Data\obj\Debug\net5.0\Library.Data.AssemblyInfo.cs
+C:\Development\Project\Library\Library.Data\obj\Debug\net5.0\Library.Data.csproj.CoreCompileInputs.cache
+C:\Development\Project\Library\Library.Data\obj\Debug\net5.0\Library.Data.dll
+C:\Development\Project\Library\Library.Data\obj\Debug\net5.0\ref\Library.Data.dll
+C:\Development\Project\Library\Library.Data\obj\Debug\net5.0\Library.Data.pdb
+C:\Development\Project\Library\Library.Data\obj\Debug\net5.0\Library.Data.genruntimeconfig.cache

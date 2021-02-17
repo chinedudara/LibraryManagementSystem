@@ -1,0 +1,13 @@
+C:\Development\Project\Library\Library.Services\bin\Debug\net5.0\Library.Services.deps.json
+C:\Development\Project\Library\Library.Services\bin\Debug\net5.0\Library.Services.dll
+C:\Development\Project\Library\Library.Services\bin\Debug\net5.0\ref\Library.Services.dll
+C:\Development\Project\Library\Library.Services\bin\Debug\net5.0\Library.Services.pdb
+C:\Development\Project\Library\Library.Services\bin\Debug\net5.0\Library.Data.dll
+C:\Development\Project\Library\Library.Services\bin\Debug\net5.0\Library.Data.pdb
+C:\Development\Project\Library\Library.Services\obj\Debug\net5.0\Library.Services.csprojAssemblyReference.cache
+C:\Development\Project\Library\Library.Services\obj\Debug\net5.0\Library.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\Project\Library\Library.Services\obj\Debug\net5.0\Library.Services.csproj.CoreCompileInputs.cache
+C:\Development\Project\Library\Library.Services\obj\Debug\net5.0\Library.Services.csproj.CopyComplete
+C:\Development\Project\Library\Library.Services\obj\Debug\net5.0\Library.Services.dll
+C:\Development\Project\Library\Library.Services\obj\Debug\net5.0\ref\Library.Services.dll
+C:\Development\Project\Library\Library.Services\obj\Debug\net5.0\Library.Services.pdb
