@@ -1,6 +1,6 @@
-﻿using Library.Models.Catalog;
+﻿using Library.Data;
+using Library.Models.Catalog;
 using Library.Web.Models.Catalog;
-using LibraryData;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -8,24 +8,26 @@ namespace Library.Controllers
 {
     public class CatalogController : Controller
     {
-        private ILibraryAsset _assets;
+        private ILibraryAsset _assetsService;
+        private ICheckoutService _checkoutService;
 
-        public CatalogController(ILibraryAsset assets)
+        public CatalogController(ILibraryAsset assetsService, ICheckoutService checkoutService)
         {
-            _assets = assets;
+            _assetsService = assetsService;
+            _checkoutService = checkoutService;
         }
 
         public IActionResult index()
         {
-            var result = _assets.GetAll();
+            var result = _assetsService.GetAll();
             var listingResult = result.Select(x => new AssetIndexListingModel
             {
                 Id = x.Id,
                 ImageUrl = x.ImageUrl,
-                AuthorOrDirector = _assets.GetAuthorOrDirector(x.Id),
-                DeweyCallNumber = _assets.GetDeweyIndex(x.Id),
+                AuthorOrDirector = _assetsService.GetAuthorOrDirector(x.Id),
+                DeweyCallNumber = _assetsService.GetDeweyIndex(x.Id),
                 Title = x.Title,
-                Type = _assets.GetType(x.Id)
+                Type = _assetsService.GetType(x.Id)
             });
 
             var model = new AssetIndexModel()
@@ -38,20 +40,32 @@ namespace Library.Controllers
 
         public IActionResult Detail(int Id)
         {
-            var result = _assets.GetById(Id);
+            var result = _assetsService.GetById(Id);
+            var hold = _checkoutService.GetCurrentHolds(Id)
+                .Select(x => new AssetHoldModel
+                {
+                    PatronName = _checkoutService.GetCurrentHoldPatronName(Id),
+                    HoldPlaced = _checkoutService.GetCurrentHoldDate(Id).ToString("d")
+                });
+
             var model = new AssetDetailModel()
             {
                 AssetId = result.Id,
                 Title = result.Title,
-                Type = _assets.GetType(Id),
-                AuthorOrDirector = _assets.GetAuthorOrDirector(Id),
+                Type = _assetsService.GetType(Id),
+                AuthorOrDirector = _assetsService.GetAuthorOrDirector(Id),
                 Year = result.Year,
-                ISBN = _assets.GetIsbn(Id),
-                DeweyCAllNumber = _assets.GetDeweyIndex(Id),
+                ISBN = _assetsService.GetIsbn(Id),
+                DeweyCAllNumber = _assetsService.GetDeweyIndex(Id),
                 Status = result.Status.Name,
                 Cost = result.Cost,
-                CurrentLocation = result.Location.Name,
-                ImageUrl = result.ImageUrl
+                CurrentLocation = _assetsService.GetCurrentLocation(Id).Name,
+                ImageUrl = result.ImageUrl,
+                PatronName = _checkoutService.GetCurrentCheckoutPatronName(Id),
+Checkout = _checkoutService.GetLatestCheckout(Id),
+CheckoutHistory = _checkoutService.GetCheckoutHistory(Id),
+CurrentHolds = 
+
             };
             return View(model);
         }

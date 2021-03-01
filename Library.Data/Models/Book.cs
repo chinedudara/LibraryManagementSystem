@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace LibraryData.Models
+namespace Library.Data.Models
 {
     public class Book : LibraryAsset
     {

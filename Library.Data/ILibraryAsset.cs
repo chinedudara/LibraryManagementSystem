@@ -1,9 +1,7 @@
-﻿using LibraryData.Models;
-using System;
+﻿using Library.Data.Models;
 using System.Collections.Generic;
-using System.Text;
 
-namespace LibraryData
+namespace Library.Data
 {
     public interface ILibraryAsset
     {

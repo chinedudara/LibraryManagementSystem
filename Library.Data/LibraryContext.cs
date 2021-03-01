@@ -1,4 +1,4 @@
-﻿using LibraryData.Models;
+﻿using Library.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace LibraryData
