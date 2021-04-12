@@ -62,10 +62,9 @@ namespace Library.Controllers
                 CurrentLocation = _assetsService.GetCurrentLocation(Id).Name,
                 ImageUrl = result.ImageUrl,
                 PatronName = _checkoutService.GetCurrentCheckoutPatronName(Id),
-Checkout = _checkoutService.GetLatestCheckout(Id),
-CheckoutHistory = _checkoutService.GetCheckoutHistory(Id),
-CurrentHolds = 
-
+                Checkout = _checkoutService.GetLatestCheckout(Id),
+                CheckoutHistory = _checkoutService.GetCheckoutHistory(Id),
+                CurrentHolds = hold
             };
             return View(model);
         }
